@@ -35,7 +35,8 @@ def prediction(evidence_data_add, prior, start_day, end_day):
     prob_sunny = 1.0 - prob_rain      
 
     # Loop from the given start day to the given end day
-    # P(R_(t+k+1) | u_{1:t}) = r_(t+k) * P(R_(t+k+1) | r_(t+k)) * P(r_(t+k) | u_{1:t}) (Equation 15.6)
+    # P(R_(t+k+1) | u_{1:t}) = r_(t+k) * P(R_(t+k+1) | r_(t+k)) * P(r_(t+k) | u_{1:t})
+    # (Equation 15.6 from Artificial Intelligence, A Modern Approach, Third Edition)
     for i in range(start_day, end_day + 1):
         # Prediction step from t to t+1
         # P(R_(t+1)) = sum_(r_t)(P(R_(t+1) | r_t) * P(r_t))

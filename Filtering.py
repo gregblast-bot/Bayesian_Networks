@@ -40,7 +40,8 @@ def filtering(evidence_data_add, prior, total_day):
     prob_sunny = prior[1]
 
     # Loop for the total number of days given
-    # α * P(u_(t+1) | R_(t+1)) * sum_(r_t)(P(R_(t+1) | r_t)P(r_t | u{1:t})) (Equation 15.5)
+    # α * P(u_(t+1) | R_(t+1)) * sum_(r_t)(P(R_(t+1) | r_t)P(r_t | u{1:t}))
+    # (Equation 15.6 from Artificial Intelligence, A Modern Approach, Third Edition)
     for i in range(total_day):
         # Umbrella is true OR false
         umbrella = observations[i]
