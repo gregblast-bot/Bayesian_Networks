@@ -78,8 +78,8 @@ Args:
 Returns:
     observations (list): The list of observations per day
 '''
-def extract( evidence_data_add):
-    # Open file containing sentences
+def extract(evidence_data_add):
+    # Open file containing evidence
     with open(evidence_data_add, 'r') as file:
         observations = parse_file(file)
 
